@@ -48,3 +48,12 @@
 
    }
 
+
+
+   /**
+    * Note : the above solution can also be used for the compare string with valid anagram
+    * for e.g : validAnagram('aaz' , 'zaa') true
+    * validAnagram('','') true
+    * validAnagram('rat', 'car') false
+    */
+
