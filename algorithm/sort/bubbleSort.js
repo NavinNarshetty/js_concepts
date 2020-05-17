@@ -33,12 +33,14 @@
 
 
 /**
- * 
+ * in bubble sort we tend to push the biggest value at the end of the array
  * @param {Array} arr
  * @returns {Array} //sorted array
  * 
  * below function helps to sort the array and we avoid the extra loops if the aray is alomst sorted with noSwap variable,
  * Also on each loop we reduce the comparision. 
+ * 
+ * TIME Complexity :O(n^2)
  */
 function bubbleSortWithOptimization(arr){
     let noswap;
