@@ -102,7 +102,7 @@ class SinglyLinkedList {
         return false;
     }
 
-    // insert a value at given specific index 
+    // insert a value in the given list at  specific index 
     insert(index,val){
         if(index< 0 || index > this.length) return false;
         if(index === 0){
