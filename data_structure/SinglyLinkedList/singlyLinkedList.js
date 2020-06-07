@@ -101,5 +101,45 @@ class SinglyLinkedList {
         }
         return false;
     }
+
+    // insert a value at given specific index 
+    insert(index,val){
+        if(index< 0 || index > this.length) return false;
+        if(index === 0){
+            this.unshift(val);
+            return true;
+        }
+        if(index === this.length){
+            this.push(val);
+            return true;
+        }
+
+        var newNode = new Node(val);
+        var prevNode = this.get(index - 1);
+        var temp = prevNode.next;
+        prevNode.next = newNode;
+        newNode.next = temp;
+        this.length++;
+        return true; 
+    }
+
+
+    // remove a value at given specific index
+    remove(index){
+        if(index < 0 || index >= this.length) return false;
+        if(index === 0){
+            this.shift();
+            return true;
+        }
+        if(index === this.length -1){
+            this.pop()
+            return true
+        }
+        var prevNode = this.get(index - 1);
+        var removedNode = prevNode.next;
+        prevNode.next = removedNode.next;
+        this.length--;
+        return true;
+    }
 }
 
