@@ -124,7 +124,7 @@ class SinglyLinkedList {
     }
 
 
-    // remove a value at given specific index
+    // remove a value from the list at given specific index
     remove(index){
         if(index < 0 || index >= this.length) return false;
         if(index === 0){
