@@ -76,5 +76,30 @@ class SinglyLinkedList {
         return this;
 
     }
+
+    // get a new value from the specified index
+    get(index){
+        if(index < 0 || index >= this.length){
+            return null;
+        }
+
+        var counter =0;
+        var current = this.head;
+        while (counter != index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+
+    // set a new value at the specified index
+    set(index , val){
+        var foundNode = this.get(index);
+        if(foundNode){
+            foundNode.val = val;
+            return true;
+        }
+        return false;
+    }
 }
 
