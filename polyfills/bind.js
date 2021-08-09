@@ -24,7 +24,7 @@ print()
 //Output: naveen narshetty is from maha india
 
 
-// Implementing your own bind function
+// Implementing your own bind function 
 
 /**
  * 
