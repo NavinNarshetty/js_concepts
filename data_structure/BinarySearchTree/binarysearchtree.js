@@ -147,29 +147,6 @@ class BinarySearchTree {
         return leftNode ? leftNode : rightNode;
     }
 
-    validBST(node=this.root){
-        return this.isValid(node,null,null);
-    }
-    isValid(root,min,max){
-        if(root == null){
-            return true;
-        }
-        if(max != null && root.value >= max){
-            return false;
-        }
-
-        if(min != null && root.value <= min){
-            return false;
-        }
-
-        let leftpart = this.isValid(root.left,min,root.value);
-        let rightpart = this.isValid(root.right,root.value,max);
-        return leftpart && rightpart
-
-    }
-
-
-
 }
 
 
